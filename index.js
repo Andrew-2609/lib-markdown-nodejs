@@ -8,7 +8,7 @@ function tratarErro(erro) {
     ));
 }
 
-function pegarArquivo(caminhoDoArquivo) {
+function pegarArquivoSincrona(caminhoDoArquivo) {
     const encoding = 'utf-8';
     fs.readFile(caminhoDoArquivo, encoding, (erro, texto) => {
         if (erro) {
@@ -19,6 +19,7 @@ function pegarArquivo(caminhoDoArquivo) {
     });
 }
 
-pegarArquivo('./arquivos/texto1.md');
+/*
+pegarArquivoSincrona('./arquivos/texto1.md');
 console.log('Simulando erro:');
-pegarArquivo('./arquivos/');
+pegarArquivoSincrona('./arquivos/');*/
