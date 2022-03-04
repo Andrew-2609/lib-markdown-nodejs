@@ -19,7 +19,18 @@ function pegarArquivoSincrona(caminhoDoArquivo) {
     });
 }
 
+function pegarArquivoAssincrona(caminhoDoArquivo) {
+    const encoding = 'utf-8';
+    fs.promises.readFile(caminhoDoArquivo, encoding)
+        .then((texto) => console.log(chalk.yellow(texto)))
+        .catch((erro) => tratarErro(erro))
+    ;
+}
+
 /*
 pegarArquivoSincrona('./arquivos/texto1.md');
 console.log('Simulando erro:');
 pegarArquivoSincrona('./arquivos/');*/
+pegarArquivoAssincrona('./arquivos/texto1.md');
+console.log('Simulando erro:');
+pegarArquivoAssincrona('./arquivos/');
