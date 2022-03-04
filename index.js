@@ -1,24 +1,11 @@
 const chalk = require('chalk');
+const fs = require('fs');
 
-const paragrafo = "Olá, mundo!";
-
-function retornarTextoEmAzul(string) {
-    return chalk.blue(string);
+function pegarArquivo(caminhoDoArquivo) {
+    const encoding = 'utf-8';
+    fs.readFile(caminhoDoArquivo, encoding, (_, texto) => {
+        console.log(chalk.green(texto));
+    });
 }
 
-function retornarTextoEmAmarelo(string) {
-    return chalk.yellow(string);
-}
-
-function retornarTextoEmNegrito(string) {
-    return chalk.bold(string);
-}
-
-function retornarTextoEmItalico(string) {
-    return chalk.italic(string);
-}
-
-console.log(retornarTextoEmAzul(paragrafo));
-console.log(retornarTextoEmAmarelo(paragrafo));
-console.log(retornarTextoEmAzul(retornarTextoEmNegrito(paragrafo)));
-console.log(retornarTextoEmAmarelo(retornarTextoEmItalico(paragrafo)));
+pegarArquivo('./arquivos/texto1.md');
