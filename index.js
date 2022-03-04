@@ -1,9 +1,24 @@
 const chalk = require('chalk');
 
-const paragrafo = `Texto retornado por uma ${chalk.blue("função")}.`;
+const paragrafo = "Olá, mundo!";
 
-function retornarTexto(string) {
-    return string;
+function retornarTextoEmAzul(string) {
+    return chalk.blue(string);
 }
 
-console.log(retornarTexto(paragrafo));
+function retornarTextoEmAmarelo(string) {
+    return chalk.yellow(string);
+}
+
+function retornarTextoEmNegrito(string) {
+    return chalk.bold(string);
+}
+
+function retornarTextoEmItalico(string) {
+    return chalk.italic(string);
+}
+
+console.log(retornarTextoEmAzul(paragrafo));
+console.log(retornarTextoEmAmarelo(paragrafo));
+console.log(retornarTextoEmAzul(retornarTextoEmNegrito(paragrafo)));
+console.log(retornarTextoEmAmarelo(retornarTextoEmItalico(paragrafo)));
