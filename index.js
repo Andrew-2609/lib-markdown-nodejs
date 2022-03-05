@@ -27,10 +27,30 @@ function pegarArquivoAssincrona(caminhoDoArquivo) {
     ;
 }
 
+async function pegarArquivoAsyncAwait(caminhoDoArquivo) {
+    const encoding = 'utf-8';
+    try {
+        const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
+        console.log(chalk.bgGreen(texto))
+    } catch (erro) {
+        console.log(chalk.bold('Simulando erro:'))
+        tratarErro(erro);
+    }
+}
+
 /*
+// Testes com função Síncrona
 pegarArquivoSincrona('./arquivos/texto1.md');
 console.log('Simulando erro:');
-pegarArquivoSincrona('./arquivos/');*/
+pegarArquivoSincrona('./arquivos/');
+
+// Testes com função assíncrona usando .then().catch()
 pegarArquivoAssincrona('./arquivos/texto1.md');
 console.log('Simulando erro:');
-pegarArquivoAssincrona('./arquivos/');
+pegarArquivoAssincrona('./arquivos/');*/
+
+// Testes com função assíncrona usando async/await
+// noinspection JSIgnoredPromiseFromCall para o WebStorm
+pegarArquivoAsyncAwait('./arquivos/texto1.md');
+// noinspection JSIgnoredPromiseFromCall para o WebStorm
+pegarArquivoAsyncAwait('./arquivos/');
