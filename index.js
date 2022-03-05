@@ -9,7 +9,7 @@ function tratarErro(erro) {
 }
 
 function extrairLinksDoTexto(texto) {
-    const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
+    const regex = /\[([^\]]*)]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
     const resultados = []
     let temp;
 
