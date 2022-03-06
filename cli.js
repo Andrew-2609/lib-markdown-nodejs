@@ -8,4 +8,4 @@ async function processarTexto(caminhoDeArquivo) {
     console.log(chalk.yellow('Lista de links:'), resultado);
 }
 
-processaTexto(caminho);
+processarTexto(caminho);

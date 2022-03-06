@@ -17,7 +17,7 @@ function extrairLinksDoTexto(texto) {
         resultados.push({[temp[1]]: temp[2]})
     }
 
-    return resultados;
+    return resultados.length === 0 ? 'Não há links.' : resultados;
 }
 
 async function pegarTexto(caminhoDoArquivo) {
