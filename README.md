@@ -4,6 +4,8 @@ This lib was created throughout one of [Alura](https://www.alura.com.br)'s cours
 
 It is very simple and made for study purposes, but feel free to try it out!
 
+See it also on [npm](https://www.npmjs.com/package/lib-markdown-nc)!
+
 ## What does it do?
 
 It reads a **markdown** file and searches for [hyperlinks](https://en.wikipedia.org/wiki/Hyperlink) in it,
