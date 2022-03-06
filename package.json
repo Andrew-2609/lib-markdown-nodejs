@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
-    "node-fetch": "^3.2.1"
+    "node-fetch": "^2.6.7"
   }
 }
