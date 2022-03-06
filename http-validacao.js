@@ -6,7 +6,7 @@ async function checarStatus(arrayUrls) {
         return await Promise.all(
             arrayUrls.map(async (url) => {
                 const res = await fetch(url);
-                return res.status;
+                return `${res.status} - ${res.statusText}`;
             })
         );
     } catch (erro) {
