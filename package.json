@@ -1,14 +1,25 @@
 {
-  "name": "lib-markdown",
+  "name": "lib-markdown-nc",
   "version": "1.0.0",
-  "description": "...",
-  "main": "index.js",
+  "description": "My first lib created to read hyperlinks inside markdown files and validate them",
+  "main": "./cli.js",
+  "bin": {"lib-markdown-nc": "./cli.js"},
+  "preferGlobal": true,
   "scripts": {
     "test": "jest ./test",
     "cli": "node cli.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Andrew Monteiro <andrew.agoravai@gmail.com>",
+  "keywords": ["markdown", "my first lib", "andrew monteiro"],
+  "homepage": "https://github.com/Andrew-2609/lib-markdown-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Andrew-2609/lib-markdown-nodejs"
+  },
+  "bugs": {
+    "url": "https://github.com/Andrew-2609/lib-markdown-nodejs",
+    "email": "andrew.agoravai@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
