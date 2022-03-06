@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const chalk = require('chalk')
 const {pegarTexto} = require('./index')
 const validarUrls = require('./http-validacao')
