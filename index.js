@@ -30,4 +30,4 @@ async function pegarTexto(caminhoDoArquivo) {
     }
 }
 
-pegarTexto('./arquivos/texto1.md');
+module.exports = pegarTexto
