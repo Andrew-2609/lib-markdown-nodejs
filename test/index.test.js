@@ -15,4 +15,9 @@ describe('pegarTexto::', () => {
         const resultado = await pegarTexto('./test/arquivos/texto1.md');
         expect(resultado).toEqual(resultados);
     });
+
+    it('deve retornar mensagem para texto sem links', async () => {
+        const resultado = await pegarTexto('./test/arquivos/texto1-sem-links.md');
+        expect(resultado).toBe('Não há links.');
+    })
 });
