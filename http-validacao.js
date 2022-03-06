@@ -15,7 +15,13 @@ function gerarArrayDeUrls(arrayLinks) {
 
 async function validarUrls(arrayLinks) {
     const arrayDeUrls = gerarArrayDeUrls(arrayLinks);
-    return await checarStatus(arrayDeUrls);
+    const statusUrls = await checarStatus(arrayDeUrls);
+    return arrayLinks.map((objeto, indice) => (
+        {
+            ...objeto,
+            status: statusUrls[indice]
+        }
+    ));
 }
 
 module.exports = validarUrls;
