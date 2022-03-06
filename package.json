@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest ./test",
-    "cli": "node cli.js ./arquivos/texto1.md"
+    "cli": "node cli.js"
   },
   "keywords": [],
   "author": "",
