@@ -1,5 +1,7 @@
 const {pegarTexto} = require('../index');
 
-test('Deve ser uma função', () => {
-    expect(typeof pegarTexto).toBe('function');
+describe('pegarTexto::', () => {
+    it('deve ser uma função', () => {
+        expect(typeof pegarTexto).toBe('function');
+    })
 });
