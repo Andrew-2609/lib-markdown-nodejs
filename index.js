@@ -24,7 +24,7 @@ async function pegarTexto(caminhoDoArquivo) {
     const encoding = 'utf-8';
     try {
         const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
-        console.log(extrairLinksDoTexto(texto));
+        return extrairLinksDoTexto(texto);
     } catch (erro) {
         tratarErro(erro);
     }
