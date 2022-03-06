@@ -30,4 +30,4 @@ async function pegarTexto(caminhoDoArquivo) {
     }
 }
 
-module.exports = pegarTexto
+module.exports = {tratarErro, pegarTexto, extrairLinksDoTexto}
