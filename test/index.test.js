@@ -11,6 +11,10 @@ describe('pegarTexto::', () => {
         expect(typeof pegarTexto).toBe('function');
     });
 
+    it('deve resolver a função com sucesso', async () => {
+        await expect(pegarTexto('./test/arquivos/texto1.md')).resolves.toEqual(resultados);
+    });
+
     it('deve retornar um array com resultados', async () => {
         const resultado = await pegarTexto('./test/arquivos/texto1.md');
         expect(resultado).toEqual(resultados);
